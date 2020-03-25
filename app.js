@@ -1,18 +1,18 @@
-const form = document.querySelector('form');
-const emailInput = document.getElementById('errorid');
+let form = document.querySelector('form');
+let emailInput = document.getElementById('errorid');
 
 document.getElementById('press').addEventListener('click', e => {
    e.preventDefault();
    let emailVal = emailInput.value.trim();
    if(emailVal === '') {
-     form.classList.add('error');
+     form.className.add('error');
      form.className.remove('success');
    } else if(!validateEmail(emailVal)) {
       form.className.remove('success');
       form.className.add('error');
    } else {
       form.className.remove('error');
-      form.classList.add('success');
+      form.className.add('success');
    } 
 });
 
