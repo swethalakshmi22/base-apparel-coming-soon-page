@@ -1,0 +1,136 @@
+html {
+   box-sizing: border-box;
+}
+
+*, *::before,*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+body {
+   font-size: 16px;
+   font-family: 'Josefin Sans', sans-serif;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1440px;
+   background-image: url(images/bg-pattern-desktop.svg);
+   background-size: cover;
+   background-position: center;
+   display: flex;
+}
+
+.left-text {
+   flex-basis: 25em;
+   padding: 4em 0 0 10em;
+   flex-grow: 2;
+   text-align: left;
+}
+
+#girl-width {
+   width: 35em;
+   height: 45em;
+}
+
+.logo {
+   margin-bottom: 7em;
+}
+
+.heading {
+   font-size: 4em;
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 0.2em;
+   color: hsl(0, 6%, 24%);
+}
+
+span {
+   font-weight: 300;
+   color: hsl(0, 36%, 70%);
+}
+
+.text {
+   padding: 0.5em 0;
+   color: hsl(0, 36%, 70%);
+}
+
+#enterid {
+   color: hsl(0, 36%, 70%);
+   padding-left: 1em;
+   border: 1px solid hsl(0, 36%, 70%);
+   border-radius: 2em;
+   margin-top: 3em;
+   position: relative;
+   width: 28em;
+   height: 3.9em;
+}
+
+#enterid::placeholder {
+   color:hsl(0, 36%, 70%);
+}
+
+#enterid:focus, #press:focus {
+   outline: none;
+}
+
+form {
+   position: relative;
+}
+
+#press {
+   font-weight: bolder;
+   font-size: larger;
+   padding: 0.8em 2.5em 0.8em 2.5em;
+   border-radius: 2em;
+   color: #fff;
+   /* background-image: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%)); */
+   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+   /* margin-left: -2.5em; */
+   border: none;
+   position: absolute;
+   top: 2.05em;
+   right: 15em;
+   box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+}
+
+
+small {
+   position: absolute;
+   top: 8em;
+   left: 2em;
+   color: hsl(0, 93%, 68%);
+   display: none;
+}
+
+#errorimg {
+   position: absolute;
+   top: 3.4em;
+   right: 26em;
+   display: none;
+}
+
+form .error #errorid {
+   border: 2px solid hsl(0, 93%, 68%);
+}
+
+form .error #errorimg {
+   display: block;
+}
+
+form .error small {
+   display: block;
+}
+
+form .success #errorid { 
+   border: 2px solid hsl(0, 6%, 24%) ;
+}
+
+form .success #errorimg { display: none;}
+
+form .success small{ display: none;}
+
+footer {
+   margin-top: 2em;
+}
