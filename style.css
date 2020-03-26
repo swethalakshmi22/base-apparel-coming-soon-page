@@ -51,12 +51,14 @@ span {
 
 .text {
    padding: 0.5em 0;
+   padding-right: 18em;
    color: hsl(0, 36%, 70%);
+   word-wrap: break-word;
 }
 
 form { 
    position: relative;
-   padding: 3em 0 0 0.5em; 
+   padding: 2em 0 0 0.5em; 
 }
 
 #enterid {
@@ -64,7 +66,7 @@ form {
    border: 1px solid hsl(0, 36%, 70%);
    padding-left: 1em;
    border-radius: 2em;
-   width: 28em;
+   width: 27em;
    height: 3.9em;
 }
 
@@ -81,8 +83,8 @@ form {
    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
    border: none;
    position: absolute;
-   top: 2.45em;
-   right: 18.5em;
+   top: 1.6em;
+   left: 17em;
    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
 }
 
@@ -92,30 +94,32 @@ cursor:pointer;
 
 small {
    position: absolute;
-   top: 9em;
+   top: 7em;
    left: 2em;
    color: hsl(0, 93%, 68%);
 }
 
 #errorimg {
    position: absolute;
-   right: 29.5em;
-   top: 3.8em;
-   /* display: none; */
+   left: 18em;
+   top: 3em;
+   display: none;
 }
 
-footer { margin-top: 2em; }
+footer { margin-top: 0.2em;}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+
   .left-text {
-    padding: 4em 0 0 5em; 
+    padding: 4em 0 0 3em; 
+    flex-basis: 18em;
    }
 
-   form {
-      padding: 1.5em 0 0 0.2em; 
-   }
+   .text { padding-right: 9em; }
+
+   form { padding: 1.5em 0 0 0.2em; }
   
    small {
    position: absolute;
@@ -133,5 +137,174 @@ footer { margin-top: 2em; }
    position: absolute;
    top: 1.2em;
    right: 6.2em; 
+   }
+}
+
+/* Large devices (laptops/desktops,992px) */
+
+@media only screen and (max-width: 992px) {
+
+   #girl-width { width: 30em; }
+
+   .text { padding-right: 3em; }
+   
+   .left-text {
+    padding: 4em 0 0 1em; 
+    flex-basis: 18em;
+   }
+   
+   form { padding-top: 0.5em; }
+  
+   #enterid { width: 26em; }
+   
+   small {
+   position: absolute;
+   top: 5.5em;
+   }
+
+   #errorimg {
+   position: absolute;
+   top: 1.4em;
+   left: 17em;
+   }
+
+   #press {
+   position: absolute;
+   top: 0.4em;
+   left: 16em;
+   }
+}
+
+/* Medium devices (landscape tablets, 768px) */
+
+@media only screen and (max-width: 768px) {
+
+   #girl-width { width: 21em; }
+
+   .heading { font-size: 3.5em; }
+
+   .text { padding-right: 3em; }
+
+   form { 
+      padding-top: 0.5em; 
+      margin-left: -0.3em;
+   }
+
+   #enterid { width: 23em; }
+   
+   small {
+      position: absolute;
+      top: 5.5em;
+   }
+   
+   #errorimg {
+      position: absolute;
+      top: 1.4em;
+      left: 14.5em;
+   }
+   
+   #press {
+      position: absolute;
+      top: 0.4em;
+      left: 14em;
+   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px) */
+
+@media only screen and (max-width: 600px) {
+   
+   #girl-width { width: 17em; }
+
+   .heading { font-size: 3em; }
+
+   .text { padding-right: 0.8em; }
+
+   form { 
+      padding-top: 1em; 
+      margin-left: -0.2em;
+   }
+
+   #enterid { width: 19.3em; }
+   
+   small {
+      position: absolute;
+      top: 6em;
+   }
+   
+   #errorimg {
+      position: absolute;
+      top: 1.8em;
+      left: 12em;
+   }
+   
+   #press {
+      position: absolute;
+      top: 0.8em;
+      left: 11.5em;
+      padding: 0.8em 1.6em 0.8em 1.6em;
+   }
+}
+
+/* Small devices (phones, 400px) */
+
+@media only screen and (max-width: 400px) {
+
+   .container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .left-text {
+      flex-basis: 0em;
+      text-align: center;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+   }
+
+   .logo { 
+      position: fixed;
+      padding-left: 1em; 
+   }
+
+   #girl-width {
+      margin-top: 2em;
+      width: 16em;
+      height: 15em;
+      margin-left: 3.2em;
+   }
+
+   .heading {
+      font-size: 3em;
+      margin-top: 1.5em;
+      letter-spacing: 0.1em;
+   }
+
+   .text { padding-right: 0.8em; }
+
+   form { 
+      padding-top: 0em; 
+      margin-left: -0.2em;
+   }
+
+   #enterid { width: 19.3em; }
+   
+   small {
+      position: absolute;
+      top: 4.5em;
+      right: 7em;
+   }
+   
+   #errorimg {
+      position: absolute;
+      top: 1em;
+      left: 14.2em;
+   }
+   
+   #press {
+      position: absolute;
+      top: 0em;
+      left: 13.5em;
+      padding: 0.8em 1.6em 0.8em 1.6em;
    }
 }
