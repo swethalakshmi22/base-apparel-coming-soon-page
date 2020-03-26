@@ -25,7 +25,7 @@ body {
 .left-text {
    flex-basis: 25em;
    padding: 4em 0 0 10em;
-   flex-grow: 2;
+   flex-grow: 1; 
    text-align: left;
 }
 
@@ -34,9 +34,7 @@ body {
    height: 45em;
 }
 
-.logo {
-   margin-bottom: 7em;
-}
+#logo { margin-bottom: 6em; }
 
 .heading {
    font-size: 4em;
@@ -56,28 +54,23 @@ span {
    color: hsl(0, 36%, 70%);
 }
 
+form { 
+   position: relative;
+   padding: 3em 0 0 0.5em; 
+}
+
 #enterid {
    color: hsl(0, 36%, 70%);
-   padding-left: 1em;
    border: 1px solid hsl(0, 36%, 70%);
+   padding-left: 1em;
    border-radius: 2em;
-   margin-top: 3em;
-   position: relative;
    width: 28em;
    height: 3.9em;
 }
 
-#enterid::placeholder {
-   color:hsl(0, 36%, 70%);
-}
+#enterid::placeholder { color:hsl(0, 36%, 70%); }
 
-#enterid:focus, #press:focus {
-   outline: none;
-}
-
-form {
-   position: relative;
-}
+#enterid:focus, #press:focus { outline: none; } 
 
 #press {
    font-weight: bolder;
@@ -88,50 +81,57 @@ form {
    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
    border: none;
    position: absolute;
-   top: 2.05em;
-   right: 15em;
+   top: 2.45em;
+   right: 18.5em;
    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
 }
 
-#press:hover {
-   background-image: linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 6%, 24%));
+#press:hover { background-image: linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 6%, 24%)); 
+cursor:pointer;
 }
 
 small {
    position: absolute;
-   top: 8em;
+   top: 9em;
    left: 2em;
    color: hsl(0, 93%, 68%);
-   display: none;
 }
 
 #errorimg {
    position: absolute;
-   top: 3.4em;
-   right: 26em;
-   display: none;
+   right: 29.5em;
+   top: 3.8em;
+   /* display: none; */
 }
 
-form .error #errorid {
-   border: 2px solid hsl(0, 93%, 68%);
-}
+footer { margin-top: 2em; }
 
-form .error #errorimg {
-   display: block;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 
-form .error small {
-   display: block;
-}
+@media only screen and (min-width: 1200px) {
+  .left-text {
+    padding: 4em 0 0 5em; 
+   }
 
-form .success #errorid { 
-   border: 2px solid hsl(0, 6%, 24%) ;
-}
+   form {
+      padding: 1.5em 0 0 0.2em; 
+   }
+  
+   small {
+   position: absolute;
+   top: 7em;
+   left: 1.7em;
+   }
 
-form .success #errorimg { display: none;}
+   #errorimg {
+   position: absolute;
+   top: 2.4em;
+   right: 15em;
+   }
 
-form .success small{ display: none;}
-
-footer {
-   margin-top: 2em;
+   #press {
+   position: absolute;
+   top: 1.2em;
+   right: 6.2em; 
+   }
 }
