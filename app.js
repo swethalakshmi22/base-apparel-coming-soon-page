@@ -15,7 +15,6 @@ document.getElementById('press').addEventListener('click', e => {
       emailInput.focus();
       errorImg.style.display = 'none';
       errorMsg.innerHTML = '';
-      emailInput.value = '';
    } 
 });
 
